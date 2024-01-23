@@ -1,0 +1,12 @@
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--Grey);
+
+}
+.experience-item span {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--White);
+}
