@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import githubLogo from './assets/images/icon-github.svg'
 import linkedinLogo from './assets/images/icon-linkedin.svg'
-import twitterLogo from './assets/images/icon-twitter.svg'
+import githubLogoHover from './assets/images/icon-github-hover.svg'
+import linkedinLogoHover from './assets/images/icon-linkedin-hover.svg'
+import frontendMentorLogoHover from './assets/images/icon-frontend-mentor-hover.svg'
 import frontendMentorLogo from './assets/images/icon-frontend-mentor.svg'
-import project1 from "./assets/images/thumbnail-project-1-large.webp"
+import dictionaryApp from "./assets/images/dictionary-app.png"
 import project2 from "./assets/images/thumbnail-project-2-large.webp"
-import profileImage from './assets/images/image-profile-desktop.webp'
+import profileImage from './assets/images/profile-image.png'
 import './App.css'
 import ExperienceCard from './experienceCard'
 import ProjectCard from './projectCard'
@@ -26,19 +28,26 @@ function App() {
             </div>
             <div className="nav-bar">
 
-              <span>mesganageletu</span>
+              <span>MesganaGeletu</span>
                   <div className="links">
-                    <a href="#"><img className="logo-icon" src={githubLogo} alt="github logo" /></a>
-                    <a href="#"><img className="logo-icon" src={linkedinLogo} alt="linkedin logo" /></a>
-                    <a href="#"><img className="logo-icon" src={twitterLogo} alt="twitter logo" /></a>
-                    <a href="#"><img className="logo-icon" src={twitterLogo} alt="twitter logo" /></a>
+                    <a href="https://github.com/mesganaG"><img className="github-logo" src={githubLogo} alt="github logo" 
+                  onMouseOver={e => e.currentTarget.src = githubLogoHover}
+                  onMouseOut={e => e.currentTarget.src = githubLogo}/></a>
+                  <a href="https://www.linkedin.com/in/mesgana-geletu-303048261/"><img className="logo-icon" src={linkedinLogo} alt="linkedin logo" 
+                    onMouseOver={e => e.currentTarget.src = linkedinLogoHover}
+                    onMouseOut={e => e.currentTarget.src = linkedinLogo}/></a>
+                  <a href="https://www.frontendmentor.io/profile/mesganaG"><img className="logo-icon" src={frontendMentorLogo} alt="front end mentor logo" 
+                    onMouseOver={e => e.currentTarget.src = frontendMentorLogoHover}
+                    onMouseOut={e => e.currentTarget.src = frontendMentorLogo}
+                  /></a>
                   </div>
             </div>
 
 
             <div className="greeting-text-container">
               <p className='greeting'>
-                Nice to meet you! <span>I'm <span className="highlight">Mesgana Geletu.</span></span>
+                Nice to meet you! 
+                <span>I'm <span className="highlight">Mesgana Geletu.</span></span>
               </p>
 
               <p className='self-intro'>
@@ -46,7 +55,9 @@ function App() {
                 that users love.
               </p>
 
-              <span className='highlight contact-me'>CONTACT ME</span>
+              <span className='highlight contact-me'>
+                <a href="#contact-form">CONTACT ME</a>
+              </span>
 
             </div>
           </div>
@@ -64,53 +75,35 @@ function App() {
           <div className="projects-section">
             <div className="heading-container">
               <span className="project-title">Projects</span>
-              <span className="highlight contact-me">CONTACT ME</span>
+              <span className='highlight contact-me'>
+                <a href="#contact-form">CONTACT ME</a>
+              </span>
             </div>
 
             <div className="projects-main-container">
               <ProjectCard
               className="project-card"
-                image={project1}
-                name="DESIGN PORTFOLIO"
-                description="HTML CSS"
-                previewLink="https://github.com/"
-                sourceCode="https://github.com/"
+                image={dictionaryApp}
+                name="Dictionary Web App"
+                description="HTML CSS Javascript API"
+                previewLink="https://mesganag.github.io/dictionary-web-app/"
+                sourceCode="https://github.com/mesganaG/dictionary-web-app"
+              />
+              <ProjectCard
+                image={project2}
+                name="Advice Generator App"
+                description="HTML CSS Javascript API"
+                previewLink="https://mesganag.github.io/advice-generator-app/"
+                sourceCode="https://github.com/mesganaG/advice-generator-app"
               />
               <ProjectCard
                 image={project2}
                 name="E-LEARNING LANDING PAGE"
                 description="HTML CSS"
-                previewLink="https://github.com/"
-                sourceCode="https://github.com/"
+                previewLink="https://mesganag.github.io/expense-chart-component/"
+                sourceCode="https://github.com/mesganaG/expense-chart-component/blob/main/"
               />
-              <ProjectCard
-                image={project2}
-                name="E-LEARNING LANDING PAGE"
-                description="HTML CSS"
-                previewLink="https://github.com/"
-                sourceCode="https://github.com/"
-              />
-              <ProjectCard
-                image={project2}
-                name="E-LEARNING LANDING PAGE"
-                description="HTML CSS"
-                previewLink="https://github.com/"
-                sourceCode="https://github.com/"
-              />
-              <ProjectCard
-                image={project2}
-                name="E-LEARNING LANDING PAGE"
-                description="HTML CSS"
-                previewLink="https://github.com/"
-                sourceCode="https://github.com/"
-              />
-              <ProjectCard
-                image={project2}
-                name="E-LEARNING LANDING PAGE"
-                description="HTML CSS"
-                previewLink="https://github.com/"
-                sourceCode="https://github.com/"
-              />
+
             </div>
           </div>
         </div>

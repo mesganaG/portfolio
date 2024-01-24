@@ -19,7 +19,7 @@ main {
   position: relative;
   z-index: 0;
   padding-bottom: 5rem;
-  padding: 2rem;
+  padding: 1rem;
   padding-top: 0;
 }
 
@@ -65,6 +65,12 @@ main {
   color: white;
 }
 
+.nav-bar span {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .links {
   display: flex;
   align-items: center;
@@ -98,6 +104,14 @@ main {
   font-weight: 700;
 }
 
+.greeting p {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting span {
+  display: inline-block;
+}
 .self-intro {
   max-width: 445px;
   line-height: 26px;
@@ -150,11 +164,11 @@ span.contact-me:hover {
 }
 
 .footer-section {
+  width: 82%;
   display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  background-color: var(--Dark-Grey);
   color: var(--White);
+  margin: 0 auto;
+ 
 }
 
 @media screen and (min-width: 320px) and (max-width: 700px) {
@@ -170,18 +184,18 @@ span.contact-me:hover {
   }
 
   .nav-bar span {
-    color: white;
+    color: #0008;
     margin: 0 auto;
     font-size: 24px;
     font-weight: 700;
   }
 
   .links {
-
     align-items: center;
     gap: 1rem;
     margin: 0 auto;
   }
+
 
   .links a {
     margin: 0 auto;
@@ -221,8 +235,12 @@ span.contact-me:hover {
     display: flex;
     flex-direction: column;
     font-size: 35px;
-    text-align: center;
     padding: 0;
+    text-align: center;
+  }
+
+  .greeting span {
+    font-size: 32px;
   }
 
 
@@ -260,9 +278,13 @@ span.contact-me:hover {
     gap: 3rem;
   }
 
+  .footer-section {
+    width: 100%;
+  }
+
 }
 
-@media screen and (min-width: 701px) and (max-width: 980px) {
+@media screen and (min-width: 701px) and (max-width: 1080px) {
 
   /* Navbar Section */
   .experience-section {
@@ -270,7 +292,14 @@ span.contact-me:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
-  
+
   }
-  
+
+  .footer-section {
+    background-color: antiquewhite;
+    width: 100%;
+  }
+
+
+
 }
