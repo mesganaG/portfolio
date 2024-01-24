@@ -6,11 +6,13 @@
 
 .project-image {
     width: 100%;
+    height: 450px;
 }
 
 
 .project-image-container {
     position: relative;
+   
 }
 
 
@@ -84,5 +86,10 @@
     .bottom-project-buttons {
         display: flex;
     }
+
+        .project-image {
+            width: 105%;
+            height: 300px;
+        }
 
 }

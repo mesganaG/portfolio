@@ -10,6 +10,8 @@ main {
   gap: 2rem;
   margin: 0px auto;
   max-width: 1080px;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--Grey);
 }
 
 .main-container {
@@ -112,6 +114,7 @@ main {
 .greeting span {
   display: inline-block;
 }
+
 .self-intro {
   max-width: 445px;
   line-height: 26px;
@@ -168,7 +171,8 @@ span.contact-me:hover {
   display: flex;
   color: var(--White);
   margin: 0 auto;
- 
+  padding-top: 2rem;
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 700px) {
@@ -253,7 +257,6 @@ span.contact-me:hover {
     text-align: center;
     margin-top: 5rem;
     padding: 2rem;
-    border-bottom: 1px solid var(--Grey);
   }
 
   .top-section {
@@ -288,7 +291,6 @@ span.contact-me:hover {
 
   /* Navbar Section */
   .experience-section {
-    background-color: gray;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 1rem;
@@ -296,7 +298,6 @@ span.contact-me:hover {
   }
 
   .footer-section {
-    background-color: antiquewhite;
     width: 100%;
   }
 

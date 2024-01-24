@@ -6,7 +6,7 @@ import linkedinLogoHover from './assets/images/icon-linkedin-hover.svg'
 import frontendMentorLogoHover from './assets/images/icon-frontend-mentor-hover.svg'
 import frontendMentorLogo from './assets/images/icon-frontend-mentor.svg'
 import dictionaryApp from "./assets/images/dictionary-app.png"
-import project2 from "./assets/images/thumbnail-project-2-large.webp"
+import advice from "./assets/images/advice-generator.png"
 import profileImage from './assets/images/profile-image.png'
 import './App.css'
 import ExperienceCard from './experienceCard'
@@ -90,18 +90,27 @@ function App() {
                 sourceCode="https://github.com/mesganaG/dictionary-web-app"
               />
               <ProjectCard
-                image={project2}
+                image={advice}
                 name="Advice Generator App"
                 description="HTML CSS Javascript API"
                 previewLink="https://mesganag.github.io/advice-generator-app/"
                 sourceCode="https://github.com/mesganaG/advice-generator-app"
               />
+
               <ProjectCard
-                image={project2}
-                name="E-LEARNING LANDING PAGE"
-                description="HTML CSS"
-                previewLink="https://mesganag.github.io/expense-chart-component/"
-                sourceCode="https://github.com/mesganaG/expense-chart-component/blob/main/"
+                image={advice}
+                name="Advice Generator App"
+                description="HTML CSS Javascript API"
+                previewLink="https://mesganag.github.io/advice-generator-app/"
+                sourceCode="https://github.com/mesganaG/advice-generator-app"
+              />
+
+              <ProjectCard
+                image={advice}
+                name="Advice Generator App"
+                description="HTML CSS Javascript API"
+                previewLink="https://mesganag.github.io/advice-generator-app/"
+                sourceCode="https://github.com/mesganaG/advice-generator-app"
               />
 
             </div>
