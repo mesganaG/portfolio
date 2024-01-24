@@ -21,11 +21,11 @@ function ProjectCards(props) {
             </div>
 
             <div className="bottom-project-buttons">
-                <span className="highlight"><a href="">View Project</a></span>
-                <span className="highlight"><a href="">View Code</a></span>
+                <span className="highlight"><a href={props.previewLink}>View Project</a></span>
+                <span className="highlight"><a href={props.sourceCode}>View Code</a></span>
             </div>
         </div>
-    ) 
+    )
 }
 
 export default ProjectCards;
