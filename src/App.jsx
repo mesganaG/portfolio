@@ -121,7 +121,6 @@ function App() {
 
       <div className="footer-section">
         <Footer message="MESSAGE" />
-
       </div>
 
     </>
