@@ -8,6 +8,7 @@ import frontendMentorLogo from './assets/images/icon-frontend-mentor.svg'
 import dictionaryApp from "./assets/images/dictionary-app.png"
 import advice from "./assets/images/advice-generator.png"
 import profileImage from './assets/images/profile-image.png'
+import KitchenWhisper from "./assets/images/kitchen-whisper.png"
 import './App.css'
 import ExperienceCard from './experienceCard'
 import ProjectCard from './projectCard'
@@ -114,7 +115,7 @@ function App() {
               />
              
               <ProjectCard
-                image={advice}
+                image={KitchenWhisper}
                 name="Kitchen Whisper "
                 description="HTML CSS React(Vite) API"
                 previewLink="https://kitchenwhisper.netlify.app/"
