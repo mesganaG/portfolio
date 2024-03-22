@@ -64,7 +64,7 @@ function App() {
 
           <div className="experience-section">
             <ExperienceCard className="one" language="HTML" years="2" />
-            <ExperienceCard language="CSS" years="4" />
+            <ExperienceCard language="CSS" years="2" />
             <ExperienceCard language="Javascript" years="2" />
             <ExperienceCard language="Accessibility" years="2" />
             <ExperienceCard language="React" years="2" />
@@ -111,6 +111,14 @@ function App() {
                 description="HTML CSS Javascript API"
                 previewLink="https://mesganag.github.io/advice-generator-app/"
                 sourceCode="https://github.com/mesganaG/advice-generator-app"
+              />
+             
+              <ProjectCard
+                image={advice}
+                name="Kitchen Whisper "
+                description="HTML CSS React(Vite) API"
+                previewLink="https://kitchenwhisper.netlify.app/"
+                sourceCode="https://github.com/mesganaG/KitchenWhisper"
               />
 
             </div>
