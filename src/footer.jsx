@@ -5,16 +5,11 @@ import frontendMentorLogo from './assets/images/icon-frontend-mentor-white.svg'
 import githubLogoHover from './assets/images/icon-github-hover.svg'
 import linkedinLogoHover from './assets/images/icon-linkedin-hover.svg'
 import frontendMentorLogoHover from './assets/images/icon-frontend-mentor-hover.svg'
-import { useForm } from 'react-hook-form';
 
 
 
-function Footer(props) {
+function Footer() {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
-
-    const onSubmit = (data) => {
-        console.log(data);
     };
     return (
 
@@ -29,7 +24,7 @@ function Footer(props) {
                     </p>
                 </div>
 
-                <form id="contact-form" action="https://formsubmit.co/el/jarujo" method="POST" onSubmit={handleSubmit(onSubmit)} noValidate>
+                <form id="contact-form" action="https://formsubmit.co/el/jarujo" method="POST" noValidate>
                     <input type="text" name="name" placeholder="NAME" />
                     <input id="emailInput" name="email" type="email" placeholder="EMAIL" {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} style={errors.email ? { borderBottom: '1px solid red' } : {}} />
                     {errors.email && <span className="error-message">Sorry, invalid format here</span>}
