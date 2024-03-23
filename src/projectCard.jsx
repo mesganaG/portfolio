@@ -16,7 +16,7 @@ function ProjectCards(props) {
             </div>
 
             <div className="project-text-container">
-                <span className="project-name">{props.name}</span>
+                <span className="project-name"><a  className='highlight' href={props.previewLink}>{props.name}</a></span>
                 <p className="project-description">{props.description}</p>
             </div>
 

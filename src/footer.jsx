@@ -29,11 +29,11 @@ function Footer(props) {
                     </p>
                 </div>
 
-                <form id="contact-form" action="" onSubmit={handleSubmit(onSubmit)} noValidate>
-                    <input type="text" placeholder="NAME" />
-                    <input id="emailInput" type="email" placeholder="EMAIL" {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} style={errors.email ? { borderBottom: '1px solid red' } : {}} />
+                <form id="contact-form" action="https://formsubmit.co/el/jarujo" method="POST" onSubmit={handleSubmit(onSubmit)} noValidate>
+                    <input type="text" name="name" placeholder="NAME" />
+                    <input id="emailInput" name="email" type="email" placeholder="EMAIL" {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} style={errors.email ? { borderBottom: '1px solid red' } : {}} />
                     {errors.email && <span className="error-message">Sorry, invalid format here</span>}
-                    <textarea name="Message" id="messageArea" cols="20" rows="5" placeholder={props.message}></textarea>
+                    <textarea name="message" id="messageArea" cols="20" rows="5" placeholder={props.message}></textarea>
 
                     <button type="submit">SEND MESSAGE</button>
                 </form>
