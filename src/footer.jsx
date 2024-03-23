@@ -5,12 +5,34 @@ import frontendMentorLogo from './assets/images/icon-frontend-mentor-white.svg'
 import githubLogoHover from './assets/images/icon-github-hover.svg'
 import linkedinLogoHover from './assets/images/icon-linkedin-hover.svg'
 import frontendMentorLogoHover from './assets/images/icon-frontend-mentor-hover.svg'
+import { useForm } from 'react-hook-form';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
 
 
-function Footer() {
+function Footer(props) {
 
+    const { register,formState: { errors } } = useForm();
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_fledfma', 'template_wfgc5uh', form.current, {
+                publicKey: 'mhey-kQ8IX_gWD_hx',
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
     };
+
     return (
 
         <div className="footer-main-container">
@@ -24,9 +46,9 @@ function Footer() {
                     </p>
                 </div>
 
-                <form id="contact-form" action="https://formsubmit.co/el/jarujo" method="POST" noValidate>
-                    <input type="text" name="name" placeholder="NAME" />
-                    <input id="emailInput" name="email" type="email" placeholder="EMAIL" {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} style={errors.email ? { borderBottom: '1px solid red' } : {}} />
+                <form id="contact-form" ref={form} onSubmit={sendEmail} noValidate>
+                    <input type="text" name="user_name" placeholder="NAME" />
+                    <input id="emailInput" name="user_email" type="email" placeholder="EMAIL" {...register("email", { required: true, pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i })} style={errors.email ? { borderBottom: '1px solid red' } : {}} />
                     {errors.email && <span className="error-message">Sorry, invalid format here</span>}
                     <textarea name="message" id="messageArea" cols="20" rows="5" placeholder={props.message}></textarea>
 
