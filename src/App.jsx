@@ -97,22 +97,6 @@ function App() {
                 previewLink="https://mesganag.github.io/advice-generator-app/"
                 sourceCode="https://github.com/mesganaG/advice-generator-app"
               />
-
-              <ProjectCard
-                image={advice}
-                name="Advice Generator App"
-                description="HTML CSS Javascript API"
-                previewLink="https://mesganag.github.io/advice-generator-app/"
-                sourceCode="https://github.com/mesganaG/advice-generator-app"
-              />
-
-              <ProjectCard
-                image={advice}
-                name="Advice Generator App"
-                description="HTML CSS Javascript API"
-                previewLink="https://mesganag.github.io/advice-generator-app/"
-                sourceCode="https://github.com/mesganaG/advice-generator-app"
-              />
              
               <ProjectCard
                 image={KitchenWhisper}
